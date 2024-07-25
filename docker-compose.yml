@@ -23,6 +23,8 @@ services:
 
     cse_leak_lab:
         build: ./leak_lab
+            volumes:
+              - ./dotgit_for_leak_lab:/var/www/html/.git
         container_name: cse@leak_lab
         ports:
           - "7904:80"
@@ -30,6 +32,8 @@ services:
 
     cse_leak_lab1:
         build: ./leak_lab1
+            volumes:
+              - ./dotgit_for_leak_lab_1:/var/www/html/.git
         container_name: cse@leak_lab1
         ports:
           - "7905:80"

@@ -155,7 +155,7 @@ session_start();
             var data = new FormData();
             data.append('image', files[0]);
             data.append('url', $("#photo-url")[0].value);
-            if($("#photo-url")[0].value!=='' && !/^(https?:\/\/)?((?:\d{1,3}\.){3}\d{1,3}|[\da-z\.-]+)\.?([a-z\.]{2,6})?([\/\w \.-]*)*\/?(\?[a-z0-9=&]*)?(#[\w-]*)?$/.test($("#photo-url")[0].value)){
+            if($("#photo-url")[0].value!=='' && !/^(https?:\/\/)?(([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}|localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:\d{1,5})?(\/[^\s]*)?$/.test($("#photo-url")[0].value)){
                 Swal.fire({
                         title: 'Error!',
                         text: "url is illegal",

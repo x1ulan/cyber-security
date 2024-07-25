@@ -13,7 +13,7 @@ if(isset($uploadfile) && $uploadfile!="NULL" && $url=="" && $_SERVER['REQUEST_ME
 
 }else if(isset($url) && $url!="" && $_SERVER['REQUEST_METHOD']=="POST"){
   
-    $regex = "/^(https?:\/\/)?((?:\d{1,3}\.){3}\d{1,3}|[\da-z\.-]+)\.?([a-z\.]{2,6})?([\/\w \.-]*)*\/?(\?[a-z0-9=&]*)?(#[\w-]*)?$/";
+    $regex = "/^(https?:\/\/)?(([a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?\.)+[a-zA-Z]{2,}|localhost|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})(:\d{1,5})?(\/[^\s]*)?$/";
     if(!preg_match($regex, $url)){
         echo "error";
         die();

@@ -52,3 +52,10 @@ services:
         ports:
           - "7907:80"
         working_dir: /app
+
+    cse_cmdi_lab:
+        build: ./cmdi_lab
+        container_name: cse_cmdi_lab
+        ports:
+          - "7908:80"
+        working_dir: /var/www/html

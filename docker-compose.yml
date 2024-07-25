@@ -1,36 +1,50 @@
 version: "3"
 services: 
-    cse@method_lab:
+    cse_method_lab:
         build: ./method_lab
         container_name: cse@method_lab
         ports:
           - "7901:80"
         working_dir: /var/www/html
 
-    cse@xss_lab:
+    cse_xss_lab:
         build: ./xss_lab
         container_name: cse@xss_lab
         ports:
           - "7902:80"
         working_dir: /var/www/html
 
-    cse@lfi_lab:
+    cse_lfi_lab:
         build: ./lfi_lab
         container_name: cse@lfi_lab
         ports:
           - "7903:80"
         working_dir: /var/www/html
 
-    cse@leak_lab1:
+    cse_leak_lab:
         build: ./leak_lab
         container_name: cse@leak_lab
         ports:
           - "7904:80"
         working_dir: /var/www/html
 
-    cse@idor_lab:
+    cse_leak_lab1:
         build: ./leak_lab1
         container_name: cse@leak_lab1
         ports:
           - "7905:80"
+        working_dir: /var/www/html
+
+    cse_ssrf_lab:
+        build: ./ssrf_lab
+        container_name: cse@ssrf_lab
+        ports:
+          - "7906:80"
+        working_dir: /var/www/html
+
+    cse_ssti_lab:
+        build: ./ssti_lab
+        container_name: cse@ssti_lab
+        ports:
+          - "7906:80"
         working_dir: /var/www/html

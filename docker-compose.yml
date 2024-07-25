@@ -1,54 +1,54 @@
 version: "3"
-services: 
+services:
     cse_method_lab:
         build: ./method_lab
-        container_name: cse@method_lab
+        container_name: cse_method_lab
         ports:
           - "7901:80"
         working_dir: /var/www/html
 
     cse_xss_lab:
         build: ./xss_lab
-        container_name: cse@xss_lab
+        container_name: cse_xss_lab
         ports:
           - "7902:80"
         working_dir: /var/www/html
 
     cse_lfi_lab:
         build: ./lfi_lab
-        container_name: cse@lfi_lab
+        container_name: cse_lfi_lab
         ports:
           - "7903:80"
         working_dir: /var/www/html
 
     cse_leak_lab:
         build: ./leak_lab
-            volumes:
-              - ./dotgit_for_leak_lab:/var/www/html/.git
-        container_name: cse@leak_lab
+        volumes:
+          - ./dotgit_for_leak_lab_1:/var/www/html/.git
+        container_name: cse_leak_lab
         ports:
           - "7904:80"
         working_dir: /var/www/html
 
     cse_leak_lab1:
         build: ./leak_lab1
-            volumes:
-              - ./dotgit_for_leak_lab_1:/var/www/html/.git
-        container_name: cse@leak_lab1
+        volumes:
+          - ./dotgit_for_leak_lab_2:/var/www/html/.git
+        container_name: cse_leak_lab1
         ports:
           - "7905:80"
         working_dir: /var/www/html
 
     cse_ssrf_lab:
         build: ./ssrf_lab
-        container_name: cse@ssrf_lab
+        container_name: cse_ssrf_lab
         ports:
           - "7906:80"
         working_dir: /var/www/html
 
     cse_ssti_lab:
         build: ./ssti_lab
-        container_name: cse@ssti_lab
+        container_name: cse_ssti_lab
         ports:
-          - "7906:80"
-        working_dir: /var/www/html
+          - "7907:80"
+        working_dir: /app

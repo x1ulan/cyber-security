@@ -59,3 +59,10 @@ services:
         ports:
           - "7908:80"
         working_dir: /var/www/html
+
+    cse_php_lab:
+        build: ./php_lab
+        container_name: cse_php_lab
+        ports:
+          - "7909:80"
+        working_dir: /var/www/html

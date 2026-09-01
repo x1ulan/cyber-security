@@ -66,3 +66,30 @@ services:
         ports:
           - "7909:80"
         working_dir: /var/www/html
+
+    skill54_web_lab1:
+        image: php:8.2.15-apache
+        container_name: skill54_web_lab1
+        volumes:
+          - ./skill54_lab/web_1:/var/www/html
+        ports:
+          - "7910:80"
+        working_dir: /var/www/html
+    
+    skill54_web_lab2:
+        image: php:8.2.15-apache
+        container_name: skill54_web_lab2
+        volumes:
+          - ./skill54_lab/web_2:/var/www/html
+        ports:
+          - "7911:80"
+        working_dir: /var/www/html
+
+    skill54_web_lab3:
+        image: php:8.2.15-apache
+        container_name: skill54_web_lab3
+        volumes:
+          - ./skill54_lab/web_3:/var/www/html
+        ports:
+          - "7912:80"
+        working_dir: /var/www/html
